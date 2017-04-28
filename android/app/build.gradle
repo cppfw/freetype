@@ -38,7 +38,7 @@ model {
             main {
                 jni {
                     dependencies {
-                        project ":libfreetype2" linkage "static"
+                        project ":libfreetype" linkage "static"
                     }
                     source {
 //                        srcDirs '../../tests'
