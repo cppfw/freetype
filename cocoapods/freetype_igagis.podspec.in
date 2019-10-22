@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
-  s.name         = "freetype2"
+  s.name         = "freetype_igagis"
   s.version      = "$(version)"
   s.summary      = "font drawing library."
-  s.homepage     = "https://github.com/igagis/#{s.name}"
+  s.homepage     = "https://github.com/igagis/freetype2"
   s.license      = { :file => 'LICENSE' }
   s.author       = { "Ivan Gagis" => "igagis@gmail.com" }
   s.platform     = :ios
