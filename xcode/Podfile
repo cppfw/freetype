@@ -1,8 +1,8 @@
 source 'https://github.com/igagis/cocoapods-repo.git'
 
-project 'freetype2/freetype2.xcodeproj'
+project 'freetype2_igagis/freetype2_igagis.xcodeproj'
 
 platform :ios, '8.0'
 
-target "freetype2" do
+target "freetype2_igagis" do
 end
