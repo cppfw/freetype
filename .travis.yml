@@ -20,10 +20,10 @@ addons:
 
 matrix:
   include:
-    - name: macosx
-      os: osx
-      compiler: clang
-      osx_image: xcode11
+    # - name: macosx
+    #   os: osx
+    #   compiler: clang
+    #   osx_image: xcode11
     - name: ios
       os: osx
       compiler: clang
