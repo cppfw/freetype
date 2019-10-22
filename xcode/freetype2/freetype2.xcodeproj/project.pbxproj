@@ -6,37 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		2CB6C6ED235F45C7009B9564 /* ftinit.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C63B235F45C7009B9564 /* ftinit.c */; };
-		2CB6C6EE235F45C7009B9564 /* ftapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C63C235F45C7009B9564 /* ftapi.c */; };
-		2CB6C6EF235F45C7009B9564 /* ftdbgmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C63D235F45C7009B9564 /* ftdbgmem.c */; };
-		2CB6C6F0235F45C7009B9564 /* ftbase.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C63E235F45C7009B9564 /* ftbase.c */; };
-		2CB6C6F1235F45C7009B9564 /* basepic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C63F235F45C7009B9564 /* basepic.c */; };
-		2CB6C6F2235F45C7009B9564 /* ftpic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C640235F45C7009B9564 /* ftpic.c */; };
-		2CB6C6F3235F45C7009B9564 /* ftbitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C641235F45C7009B9564 /* ftbitmap.c */; };
-		2CB6C6F4235F45C7009B9564 /* ftglyph.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C642235F45C7009B9564 /* ftglyph.c */; };
-		2CB6C6F6235F45C7009B9564 /* ftsystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C644235F45C7009B9564 /* ftsystem.c */; };
-		2CB6C6FB235F45C7009B9564 /* ftdebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C649235F45C7009B9564 /* ftdebug.c */; };
-		2CB6C6FD235F45C7009B9564 /* ftbbox.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C64D235F45C7009B9564 /* ftbbox.c */; };
-		2CB6C6FE235F45C7009B9564 /* ftstroke.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C64E235F45C7009B9564 /* ftstroke.c */; };
-		2CB6C6FF235F45C7009B9564 /* ftsynth.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C64F235F45C7009B9564 /* ftsynth.c */; };
-		2CB6C70D235F45C7009B9564 /* autofit.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C666235F45C7009B9564 /* autofit.c */; };
-		2CB6C713235F45C7009B9564 /* ftspic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C67A235F45C7009B9564 /* ftspic.c */; };
-		2CB6C715235F45C7009B9564 /* smooth.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C67D235F45C7009B9564 /* smooth.c */; };
-		2CB6C718235F45C7009B9564 /* psnames.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C685235F45C7009B9564 /* psnames.c */; };
-		2CB6C719235F45C7009B9564 /* pspic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C688235F45C7009B9564 /* pspic.c */; };
-		2CB6C722235F45C7009B9564 /* sfntpic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C69A235F45C7009B9564 /* sfntpic.c */; };
-		2CB6C723235F45C7009B9564 /* sfnt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C69B235F45C7009B9564 /* sfnt.c */; };
-		2CB6C72A235F45C7009B9564 /* truetype.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6AB235F45C7009B9564 /* truetype.c */; };
-		2CB6C731235F45C7009B9564 /* pshpic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6BC235F45C7009B9564 /* pshpic.c */; };
-		2CB6C733235F45C7009B9564 /* pshinter.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6C1235F45C7009B9564 /* pshinter.c */; };
-		2CB6C735235F45C7009B9564 /* pshrec.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6C5235F45C7009B9564 /* pshrec.c */; };
-		2CB6C736235F45C7009B9564 /* pshglob.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6C8235F45C7009B9564 /* pshglob.c */; };
-		2CB6C73B235F45C7009B9564 /* cff.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6D4235F45C7009B9564 /* cff.c */; };
-		2CB6C740235F45C7009B9564 /* rastpic.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6E2235F45C7009B9564 /* rastpic.c */; };
-		2CB6C743235F45C7009B9564 /* raster.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB6C6EA235F45C7009B9564 /* raster.c */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		2CB6C62B235F4576009B9564 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -51,36 +20,6 @@
 
 /* Begin PBXFileReference section */
 		2CB6C62D235F4576009B9564 /* libfreetype2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfreetype2.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CB6C63B235F45C7009B9564 /* ftinit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftinit.c; sourceTree = "<group>"; };
-		2CB6C63C235F45C7009B9564 /* ftapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftapi.c; sourceTree = "<group>"; };
-		2CB6C63D235F45C7009B9564 /* ftdbgmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftdbgmem.c; sourceTree = "<group>"; };
-		2CB6C63E235F45C7009B9564 /* ftbase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbase.c; sourceTree = "<group>"; };
-		2CB6C63F235F45C7009B9564 /* basepic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = basepic.c; sourceTree = "<group>"; };
-		2CB6C640235F45C7009B9564 /* ftpic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftpic.c; sourceTree = "<group>"; };
-		2CB6C641235F45C7009B9564 /* ftbitmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbitmap.c; sourceTree = "<group>"; };
-		2CB6C642235F45C7009B9564 /* ftglyph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftglyph.c; sourceTree = "<group>"; };
-		2CB6C644235F45C7009B9564 /* ftsystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftsystem.c; sourceTree = "<group>"; };
-		2CB6C649235F45C7009B9564 /* ftdebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftdebug.c; sourceTree = "<group>"; };
-		2CB6C64A235F45C7009B9564 /* basepic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basepic.h; sourceTree = "<group>"; };
-		2CB6C64B235F45C7009B9564 /* ftbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftbase.h; sourceTree = "<group>"; };
-		2CB6C64D235F45C7009B9564 /* ftbbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftbbox.c; sourceTree = "<group>"; };
-		2CB6C64E235F45C7009B9564 /* ftstroke.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftstroke.c; sourceTree = "<group>"; };
-		2CB6C64F235F45C7009B9564 /* ftsynth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftsynth.c; sourceTree = "<group>"; };
-		2CB6C666235F45C7009B9564 /* autofit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = autofit.c; sourceTree = "<group>"; };
-		2CB6C67A235F45C7009B9564 /* ftspic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftspic.c; sourceTree = "<group>"; };
-		2CB6C67D235F45C7009B9564 /* smooth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = smooth.c; sourceTree = "<group>"; };
-		2CB6C685235F45C7009B9564 /* psnames.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = psnames.c; sourceTree = "<group>"; };
-		2CB6C688235F45C7009B9564 /* pspic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pspic.c; sourceTree = "<group>"; };
-		2CB6C69A235F45C7009B9564 /* sfntpic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sfntpic.c; sourceTree = "<group>"; };
-		2CB6C69B235F45C7009B9564 /* sfnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sfnt.c; sourceTree = "<group>"; };
-		2CB6C6AB235F45C7009B9564 /* truetype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = truetype.c; sourceTree = "<group>"; };
-		2CB6C6BC235F45C7009B9564 /* pshpic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pshpic.c; sourceTree = "<group>"; };
-		2CB6C6C1235F45C7009B9564 /* pshinter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pshinter.c; sourceTree = "<group>"; };
-		2CB6C6C5235F45C7009B9564 /* pshrec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pshrec.c; sourceTree = "<group>"; };
-		2CB6C6C8235F45C7009B9564 /* pshglob.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pshglob.c; sourceTree = "<group>"; };
-		2CB6C6D4235F45C7009B9564 /* cff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cff.c; sourceTree = "<group>"; };
-		2CB6C6E2235F45C7009B9564 /* rastpic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rastpic.c; sourceTree = "<group>"; };
-		2CB6C6EA235F45C7009B9564 /* raster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = raster.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,119 +52,8 @@
 		2CB6C62F235F4576009B9564 /* freetype2 */ = {
 			isa = PBXGroup;
 			children = (
-				2CB6C653235F45C7009B9564 /* autofit */,
-				2CB6C639235F45C7009B9564 /* base */,
-				2CB6C6C9235F45C7009B9564 /* cff */,
-				2CB6C6B9235F45C7009B9564 /* pshinter */,
-				2CB6C67E235F45C7009B9564 /* psnames */,
-				2CB6C6DF235F45C7009B9564 /* raster */,
-				2CB6C689235F45C7009B9564 /* sfnt */,
-				2CB6C672235F45C7009B9564 /* smooth */,
-				2CB6C6A5235F45C7009B9564 /* truetype */,
 			);
 			path = freetype2;
-			sourceTree = "<group>";
-		};
-		2CB6C639235F45C7009B9564 /* base */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C63B235F45C7009B9564 /* ftinit.c */,
-				2CB6C63C235F45C7009B9564 /* ftapi.c */,
-				2CB6C63D235F45C7009B9564 /* ftdbgmem.c */,
-				2CB6C63E235F45C7009B9564 /* ftbase.c */,
-				2CB6C63F235F45C7009B9564 /* basepic.c */,
-				2CB6C640235F45C7009B9564 /* ftpic.c */,
-				2CB6C641235F45C7009B9564 /* ftbitmap.c */,
-				2CB6C642235F45C7009B9564 /* ftglyph.c */,
-				2CB6C644235F45C7009B9564 /* ftsystem.c */,
-				2CB6C649235F45C7009B9564 /* ftdebug.c */,
-				2CB6C64A235F45C7009B9564 /* basepic.h */,
-				2CB6C64B235F45C7009B9564 /* ftbase.h */,
-				2CB6C64D235F45C7009B9564 /* ftbbox.c */,
-				2CB6C64E235F45C7009B9564 /* ftstroke.c */,
-				2CB6C64F235F45C7009B9564 /* ftsynth.c */,
-			);
-			name = base;
-			path = ../../../src/base;
-			sourceTree = "<group>";
-		};
-		2CB6C653235F45C7009B9564 /* autofit */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C666235F45C7009B9564 /* autofit.c */,
-			);
-			name = autofit;
-			path = ../../../src/autofit;
-			sourceTree = "<group>";
-		};
-		2CB6C672235F45C7009B9564 /* smooth */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C67A235F45C7009B9564 /* ftspic.c */,
-				2CB6C67D235F45C7009B9564 /* smooth.c */,
-			);
-			name = smooth;
-			path = ../../../src/smooth;
-			sourceTree = "<group>";
-		};
-		2CB6C67E235F45C7009B9564 /* psnames */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C685235F45C7009B9564 /* psnames.c */,
-				2CB6C688235F45C7009B9564 /* pspic.c */,
-			);
-			name = psnames;
-			path = ../../../src/psnames;
-			sourceTree = "<group>";
-		};
-		2CB6C689235F45C7009B9564 /* sfnt */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C69A235F45C7009B9564 /* sfntpic.c */,
-				2CB6C69B235F45C7009B9564 /* sfnt.c */,
-			);
-			name = sfnt;
-			path = ../../../src/sfnt;
-			sourceTree = "<group>";
-		};
-		2CB6C6A5235F45C7009B9564 /* truetype */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C6AB235F45C7009B9564 /* truetype.c */,
-			);
-			name = truetype;
-			path = ../../../src/truetype;
-			sourceTree = "<group>";
-		};
-		2CB6C6B9235F45C7009B9564 /* pshinter */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C6BC235F45C7009B9564 /* pshpic.c */,
-				2CB6C6C1235F45C7009B9564 /* pshinter.c */,
-				2CB6C6C5235F45C7009B9564 /* pshrec.c */,
-				2CB6C6C8235F45C7009B9564 /* pshglob.c */,
-			);
-			name = pshinter;
-			path = ../../../src/pshinter;
-			sourceTree = "<group>";
-		};
-		2CB6C6C9235F45C7009B9564 /* cff */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C6D4235F45C7009B9564 /* cff.c */,
-			);
-			name = cff;
-			path = ../../../src/cff;
-			sourceTree = "<group>";
-		};
-		2CB6C6DF235F45C7009B9564 /* raster */ = {
-			isa = PBXGroup;
-			children = (
-				2CB6C6E2235F45C7009B9564 /* rastpic.c */,
-				2CB6C6EA235F45C7009B9564 /* raster.c */,
-			);
-			name = raster;
-			path = ../../../src/raster;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,34 +113,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB6C6EE235F45C7009B9564 /* ftapi.c in Sources */,
-				2CB6C735235F45C7009B9564 /* pshrec.c in Sources */,
-				2CB6C723235F45C7009B9564 /* sfnt.c in Sources */,
-				2CB6C713235F45C7009B9564 /* ftspic.c in Sources */,
-				2CB6C70D235F45C7009B9564 /* autofit.c in Sources */,
-				2CB6C6FD235F45C7009B9564 /* ftbbox.c in Sources */,
-				2CB6C6EF235F45C7009B9564 /* ftdbgmem.c in Sources */,
-				2CB6C6F6235F45C7009B9564 /* ftsystem.c in Sources */,
-				2CB6C6F3235F45C7009B9564 /* ftbitmap.c in Sources */,
-				2CB6C719235F45C7009B9564 /* pspic.c in Sources */,
-				2CB6C715235F45C7009B9564 /* smooth.c in Sources */,
-				2CB6C6F1235F45C7009B9564 /* basepic.c in Sources */,
-				2CB6C731235F45C7009B9564 /* pshpic.c in Sources */,
-				2CB6C736235F45C7009B9564 /* pshglob.c in Sources */,
-				2CB6C6F4235F45C7009B9564 /* ftglyph.c in Sources */,
-				2CB6C73B235F45C7009B9564 /* cff.c in Sources */,
-				2CB6C743235F45C7009B9564 /* raster.c in Sources */,
-				2CB6C6FE235F45C7009B9564 /* ftstroke.c in Sources */,
-				2CB6C733235F45C7009B9564 /* pshinter.c in Sources */,
-				2CB6C6F2235F45C7009B9564 /* ftpic.c in Sources */,
-				2CB6C6FB235F45C7009B9564 /* ftdebug.c in Sources */,
-				2CB6C6F0235F45C7009B9564 /* ftbase.c in Sources */,
-				2CB6C6FF235F45C7009B9564 /* ftsynth.c in Sources */,
-				2CB6C722235F45C7009B9564 /* sfntpic.c in Sources */,
-				2CB6C718235F45C7009B9564 /* psnames.c in Sources */,
-				2CB6C6ED235F45C7009B9564 /* ftinit.c in Sources */,
-				2CB6C740235F45C7009B9564 /* rastpic.c in Sources */,
-				2CB6C72A235F45C7009B9564 /* truetype.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
