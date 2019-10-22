@@ -89,8 +89,8 @@ before_install:
     brew install --force openssl &&
 
     sudo gem install cocoapods &&
-    pod repo add --silent igagis https://$MYCI_GIT_USERNAME:$MYCI_GIT_ACCESS_TOKEN@github.com/igagis/cocoapods-repo.git &&
-    pod install --project-directory=xcode;
+    pod repo add --silent igagis https://$MYCI_GIT_USERNAME:$MYCI_GIT_ACCESS_TOKEN@github.com/igagis/cocoapods-repo.git;
+#    pod install --project-directory=xcode;
   fi
 
 install:
