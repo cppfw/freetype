@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "freetype_igagis"
+  s.name         = "freetype2_igagis"
   s.version      = "2.6.4.1"
   s.summary      = "font drawing library."
   s.homepage     = "https://github.com/igagis/freetype2"
