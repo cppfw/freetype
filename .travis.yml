@@ -47,7 +47,8 @@ env:
   # Encrypted MYCI_GIT_ACCESS_TOKEN for publishing to homebrew-tap / cocoapods.
   - secure: "y+Nuee9K4ysuIXcsU0B4Vf5KxNEwPiKmTWUWKJKhIfyINid+9OYoFQqtK54vqkyKIpngluXbWF5tV0fYuAsG4zWOQ2KNIVgEDO+3GgRltnjIdUz1YnkwHowzWswx6sfnI3QBWIsitNwa51Wouh0zwfZDOeD18NMlcpAYobUzSeK+mwDKtcLM63EqyuhJaWyj0Pc9a/IMzMVaIKE73GQM6Tx2d2c8W/6yJwP/fAV4jR/9BmD2o3TMlJtvEaZ3n0Q9sA/kutCTOspQToHqii8etGX70I67I1wVz2gjiXhh48N1Bmc4o2xFbKSi9106+RH7fuzaA5rj+JNlwr3RffJ9ggSS9v8FcH13NzWkPKL9Ovxfyr87ntVJhd9oRcz/EmyuY9D7IyH3GuZ5YLwfN3Q8JIsO+gQeLo4j2wyF1F0mdm5S9s9QLIJt2jmeX+Uw8blRubyfZlHPmUiJQqprTooHTvIeuHqjcPTLkaYQZv8jaZwI7kHFfOD1R8MxofekWiKvhpUXQHAyln6LZ59aqtPDTj4tEQ+kEiCNcVTnt0CczlI71BiO8VKRDjxsys0yV7Am1M/ur35rw50gEblqqMVO/fwdneEGjOlmJ/6Frn8uhuKpEThZdKXTiiQataWOnQ0DLLnBlhtXjdfc9DWbrH7c8UcrFu+R746XL7QkTyAO2AE="
   - MYCI_GIT_USERNAME=igagis
-  - PACKAGE_NAME=freetype2
+  - PACKAGE_NAME=freetype2_igagis
+  - PACKAGE_VERSION=2.10.1.1
   matrix:
   # - OS_REL=xenial OS=ubuntu DOCKER_IMAGE=$OS:$OS_REL PACKAGE_TYPE=deb
   # - OS_REL=bionic OS=ubuntu DOCKER_IMAGE=$OS:$OS_REL PACKAGE_TYPE=deb
@@ -120,12 +121,12 @@ script:
 #   fi
 - if [ "$TRAVIS_JOB_NAME" == "ios" ]; then
     xcodebuild -workspace xcode/$PACKAGE_NAME.xcworkspace -scheme $PACKAGE_NAME CONFIGURATION_BUILD_DIR=../build -configuration Release &&
-    myci-create-zip-package.sh -h include -f xcode/build/lib$PACKAGE_NAME.a///lib/ios -f LICENSE $PACKAGE_NAME-`myci-deb-version.sh debian/changelog`.zip;
+    myci-create-zip-package.sh -h include -f xcode/build/lib$PACKAGE_NAME.a///lib/ios -f LICENSE $PACKAGE_NAME-$PACKAGE_VERSION.zip;
   fi
 - if [ "$TRAVIS_JOB_NAME" == "android" ]; then
     (cd android && ./gradlew build) &&
-    myci-apply-version.sh -v `myci-deb-version.sh debian/changelog` android/*.pom.in &&
-    myci-apply-version.sh -v `myci-deb-version.sh debian/changelog` android/*.aar.in --filename-only;
+    myci-apply-version.sh -v $PACKAGE_VERSION android/*.pom.in &&
+    myci-apply-version.sh -v $PACKAGE_VERSION android/*.aar.in --filename-only;
   fi
 
 
@@ -140,7 +141,7 @@ deploy:
 #   script: myci-deploy-debian-bintray.sh -u igagis -r $OS -p $PACKAGE_NAME -c main -d $OS_REL $TRAVIS_BUILD_DIR/../*.deb
 - provider: script
   skip_cleanup: true
-  script: myci-deploy-maven-bintray.sh -u igagis -r android -p io/github/igagis android/$PACKAGE_NAME-`myci-deb-version.sh debian/changelog`.aar
+  script: myci-deploy-maven-bintray.sh -u igagis -r android -p io/github/igagis android/$PACKAGE_NAME-$PACKAGE_VERSION.aar
   on:
     tags: false
     condition: $TRAVIS_JOB_NAME = android
@@ -152,7 +153,7 @@ deploy:
 #     condition: $TRAVIS_JOB_NAME = macosx
 - provider: script
   skip_cleanup: true
-  script: rvm 2.3.3 do myci-deploy-cocoapods.sh -r igagis -v `myci-deb-version.sh debian/changelog` -u igagis -b cocoapods -p $PACKAGE_NAME-`myci-deb-version.sh debian/changelog`.zip cocoapods/$PACKAGE_NAME.podspec.in
+  script: rvm 2.3.3 do myci-deploy-cocoapods.sh -r igagis -v $PACKAGE_VERSION -u igagis -b cocoapods -p $PACKAGE_NAME-$PACKAGE_VERSION.zip cocoapods/$PACKAGE_NAME.podspec.in
   on:
     tags: false
     condition: $TRAVIS_JOB_NAME = ios
