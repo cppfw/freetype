@@ -55,7 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2CB6C62D235F4576009B9564 /* libfreetype2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfreetype2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB6C62D235F4576009B9564 /* libfreetype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfreetype.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF197EA235F78B100BF9A57 /* ftmm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ftmm.c; path = ../../../../src/base/ftmm.c; sourceTree = "<group>"; };
 		2CF197EB235F78B100BF9A57 /* ftfstype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ftfstype.c; path = ../../../../src/base/ftfstype.c; sourceTree = "<group>"; };
 		2CF197EC235F78B100BF9A57 /* ftwinfnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ftwinfnt.c; path = ../../../../src/base/ftwinfnt.c; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		2CB6C624235F4576009B9564 = {
 			isa = PBXGroup;
 			children = (
-				2CB6C62F235F4576009B9564 /* freetype2 */,
+				2CB6C62F235F4576009B9564 /* freetype */,
 				2CB6C62E235F4576009B9564 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,12 +113,12 @@
 		2CB6C62E235F4576009B9564 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CB6C62D235F4576009B9564 /* libfreetype2.a */,
+				2CB6C62D235F4576009B9564 /* libfreetype.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CB6C62F235F4576009B9564 /* freetype2 */ = {
+		2CB6C62F235F4576009B9564 /* freetype */ = {
 			isa = PBXGroup;
 			children = (
 				2CF197E9235F77E600BF9A57 /* base */,
@@ -126,7 +126,7 @@
 				2CF197E7235F77AD00BF9A57 /* rasterizers */,
 				2CF197E6235F779B00BF9A57 /* aux_modules */,
 			);
-			path = freetype2;
+			path = freetype;
 			sourceTree = "<group>";
 		};
 		2CF197E6235F779B00BF9A57 /* aux_modules */ = {
@@ -193,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CB6C62C235F4576009B9564 /* freetype2 */ = {
+		2CB6C62C235F4576009B9564 /* freetype */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CB6C636235F4576009B9564 /* Build configuration list for PBXNativeTarget "freetype2" */;
+			buildConfigurationList = 2CB6C636235F4576009B9564 /* Build configuration list for PBXNativeTarget "freetype" */;
 			buildPhases = (
 				2CB6C629235F4576009B9564 /* Sources */,
 				2CB6C62A235F4576009B9564 /* Frameworks */,
@@ -205,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = freetype2;
+			name = freetype;
 			productName = freetype2;
-			productReference = 2CB6C62D235F4576009B9564 /* libfreetype2.a */;
+			productReference = 2CB6C62D235F4576009B9564 /* libfreetype.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2CB6C628235F4576009B9564 /* Build configuration list for PBXProject "freetype2" */;
+			buildConfigurationList = 2CB6C628235F4576009B9564 /* Build configuration list for PBXProject "freetype" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -237,7 +237,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CB6C62C235F4576009B9564 /* freetype2 */,
+				2CB6C62C235F4576009B9564 /* freetype */,
 			);
 		};
 /* End PBXProject section */
@@ -435,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CB6C628235F4576009B9564 /* Build configuration list for PBXProject "freetype2" */ = {
+		2CB6C628235F4576009B9564 /* Build configuration list for PBXProject "freetype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CB6C634235F4576009B9564 /* Debug */,
@@ -444,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CB6C636235F4576009B9564 /* Build configuration list for PBXNativeTarget "freetype2" */ = {
+		2CB6C636235F4576009B9564 /* Build configuration list for PBXNativeTarget "freetype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CB6C637235F4576009B9564 /* Debug */,
