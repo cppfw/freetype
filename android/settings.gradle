@@ -1,1 +1,1 @@
-include ':app', ':freetype2'
+include ':app', ':freetype'

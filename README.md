@@ -1,2 +1,2 @@
-# freetype2
-Freetype2 sources for packaging to Android AAR
+# freetype
+Freetype2 sources for packaging to Android AAR, cocoapods, nuget
