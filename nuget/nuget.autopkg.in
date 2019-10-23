@@ -1,0 +1,101 @@
+configurations {
+	UserPlatformToolset {
+		// Needed because autopackage lacks VS2015+ support
+		key = "PlatformToolset";
+		choices: "v140,v141,v142";
+	};
+
+	RuntimeLibrary {
+		key = "RuntimeLibrary"; // This is the key you can find in .vcxproj file
+		choices: "MultiThreaded,MultiThreadedDebug,MultiThreadedDLL,MultiThreadedDebugDLL"; // these choices must be valid values for .vcxproj file
+	};
+}
+
+nuget{
+	nuspec{
+		id = freetype_static;
+		version : $(version);
+		title: font drawing library;
+		authors: {Freetype authors};
+		owners: {Ivan Gagis};
+		licenseUrl: "https://raw.githubusercontent.com/igagis/freetype/master/LICENSE";
+		projectUrl: "https://github.com/igagis/freetype";
+		iconUrl: "https://github.com/igagis/freetype/blob/master/logo.svg";
+		requireLicenseAcceptance:false;
+		summary: font drawing library;
+
+		description: @"font drawing library";
+		releaseNotes: "Initial release";
+		copyright: Copyright Freetype authors;
+		tags: { native};
+	}
+	dependencies {
+		packages : {
+		};
+	}
+	files {
+		//this is needed to put headers in the base folder
+		nestedInclude: {
+			#destination = ${d_include};
+			"..\include\**\*.h"
+		};
+
+		//==== v140 tools ====
+
+		[x86,v140,release] {
+			lib: ..\msvs_solution\v140_Release\freetype.lib;
+		}
+		[x86,v140,debug] {
+			lib: ..\msvs_solution\v140_Debug\freetype.lib;
+		}
+		[x64,v140,release] {
+			lib: ..\msvs_solution\x64\v140_Release\freetype.lib;
+		}
+		[x64,v140,debug] {
+			lib: ..\msvs_solution\x64\v140_Debug\freetype.lib;
+		}
+
+		//==== v141 tools ====
+
+		[x86,v141,release] {
+			lib: ..\msvs_solution\v141_Release\freetype.lib;
+		}
+		[x86,v141,debug] {
+			lib: ..\msvs_solution\v141_Debug\freetype.lib;
+		}
+		[x64,v141,release] {
+			lib: ..\msvs_solution\x64\v141_Release\freetype.lib;
+		}
+		[x64,v141,debug] {
+			lib: ..\msvs_solution\x64\v141_Debug\freetype.lib;
+		}
+
+		//==== v142 tools ====
+
+		[x86,v142,release,MultiThreaded] {
+			lib: ..\msvs_solution\v142_Release_MT\freetype.lib;
+		}
+		[x86,v142,debug,MultiThreadedDebug] {
+			lib: ..\msvs_solution\v142_Debug_MT\freetype.lib;
+		}
+		[x64,v142,release,MultiThreaded] {
+			lib: ..\msvs_solution\x64\v142_Release_MT\freetype.lib;
+		}
+		[x64,v142,debug,MultiThreadedDebug] {
+			lib: ..\msvs_solution\x64\v142_Debug_MT\freetype.lib;
+		}
+		[x86,v142,release,MultiThreadedDLL] {
+			lib: ..\msvs_solution\v142_Release_MD\freetype.lib;
+		}
+		[x86,v142,debug,MultiThreadedDebugDLL] {
+			lib: ..\msvs_solution\v142_Debug_MD\freetype.lib;
+		}
+		[x64,v142,release,MultiThreadedDLL] {
+			lib: ..\msvs_solution\x64\v142_Release_MD\freetype.lib;
+		}
+		[x64,v142,debug,MultiThreadedDebugDLL] {
+			lib: ..\msvs_solution\x64\v142_Debug_MD\freetype.lib;
+		}
+
+	}
+}
