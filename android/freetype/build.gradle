@@ -94,7 +94,7 @@ task copyNdkLibsToAAR(type: Zip) {
     exclude('**/*.so') //do not include shared libraries into final AAR
     from("../../include") {
         include '**/*.h'
-        into('ndkLibs/include/freetype2')
+        into('ndkLibs/include/freetype')
     }
     from("build/intermediates/cmake/debug/obj"){
         include('**/*.a')
