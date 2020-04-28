@@ -521,6 +521,9 @@
     <ClCompile Include="..\..\src\cid\type1cid.c" />
     <ClCompile Include="..\..\src\pcf\pcf.c" />
     <ClCompile Include="..\..\src\pfr\pfr.c" />
+    <ClCompile Include="..\..\src\psaux\psaux.c" />
+    <ClCompile Include="..\..\src\pshinter\pshinter.c" />
+    <ClCompile Include="..\..\src\psnames\psnames.c" />
     <ClCompile Include="..\..\src\raster\raster.c" />
     <ClCompile Include="..\..\src\sfnt\sfnt.c" />
     <ClCompile Include="..\..\src\smooth\smooth.c" />
