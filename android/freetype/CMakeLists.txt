@@ -48,6 +48,9 @@ set(srcs
       ../../src/type1/type1.c
       ../../src/type42/type42.c
       ../../src/winfonts/winfnt.c
+      ../../src/psaux/psaux.c
+      ../../src/pshinter/pshinter.c
+      ../../src/psnames/psnames.c
 
       ../../src/raster/raster.c
       ../../src/smooth/smooth.c
