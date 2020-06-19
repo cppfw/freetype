@@ -21,9 +21,9 @@ android {
     }
 
     nativeBundleExport {
-        headerDir = "${project.projectDir}/../../"
+        headerDir = "${project.projectDir}/../../include"
         bundleStatic = true
-        includeHeaderFilter.add("freetype/**/*.h")
+        includeHeaderFilter.add("**/*.h")
     }
 
     buildTypes {
