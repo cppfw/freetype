@@ -18,9 +18,9 @@ nuget{
 		title: font drawing library;
 		authors: {Freetype authors};
 		owners: {Ivan Gagis};
-		licenseUrl: "https://raw.githubusercontent.com/igagis/freetype/master/LICENSE";
-		projectUrl: "https://github.com/igagis/freetype";
-		iconUrl: "https://github.com/igagis/freetype/blob/master/logo.svg";
+		licenseUrl: "https://raw.githubusercontent.com/cppfw/freetype/master/LICENSE";
+		projectUrl: "https://github.com/cppfw/freetype";
+		iconUrl: "https://github.com/cppfw/freetype/blob/master/logo.svg";
 		requireLicenseAcceptance:false;
 		summary: font drawing library;
 
