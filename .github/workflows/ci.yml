@@ -1,9 +1,12 @@
 name: ci
-on: [push, pull_request]
+on:
+  push: {branches-ignore: [latest], tags: ['*']}
+  pull_request:
 env:
   PACKAGE_NAME: ${{ github.event.repository.name }}
-  MYCI_JFROG_USERNAME: ivan.gagis@gmail.com
-  MYCI_JFROG_PASSWORD: ${{ secrets.MYCI_JFROG_PASSWORD }}
+  PACKAGE_VERSION: ${{ github.sha }}
+  MYCI_NEXUS_USERNAME: cppfw
+  MYCI_NEXUS_PASSWORD: ${{ secrets.MYCI_NEXUS_PASSWORD }}
   MYCI_GIT_USERNAME: igagis
   MYCI_GIT_PASSWORD: ${{ secrets.MYCI_GIT_ACCESS_TOKEN }}
 jobs:
@@ -18,7 +21,7 @@ jobs:
     - name: install ci tools
       run: brew install myci
     - name: git clone
-      uses: actions/checkout@v2
+      uses: myci-actions/checkout@master
     - name: set PACKAGE_VERSION
       uses: myci-actions/export-env-var@master
       with: {name: PACKAGE_VERSION, value: $(cat version.txt)}
@@ -37,7 +40,9 @@ jobs:
     - name: create package
       run: myci-create-zip-package.sh --headers-dir include --file xcode/build/lib$PACKAGE_NAME.a///lib/ios --file LICENSE $PACKAGE_NAME-$PACKAGE_VERSION.zip
     - name: deploy
-      run: myci-deploy-cocoapods-jfrog.sh --repo cppfw --version $PACKAGE_VERSION --domain cppfw --jfrog-repo cocoapods --package-file $PACKAGE_NAME-$PACKAGE_VERSION.zip cocoapods/$PACKAGE_NAME.podspec.in
+      run: |
+        echo "${{ secrets.MYCI_REPO_SSH_KEY }}" > repo_key_rsa && chmod 600 repo_key_rsa
+        myci-deploy-cocoapods-ssh.sh --repo cppfw --version $PACKAGE_VERSION --server gagis.hopto.org --key repo_key_rsa --generic-repo cppfw/cocoapods --package $PACKAGE_NAME-$PACKAGE_VERSION.zip cocoapods/$PACKAGE_NAME.podspec.in
       # if: startsWith(github.ref, 'refs/tags/')
 ##### android #####
   android:
@@ -45,16 +50,14 @@ jobs:
     container: mingc/android-build-box:latest
     steps:
     - name: git clone
-      uses: actions/checkout@v2
+      uses: myci-actions/checkout@master
     - name: add cppfw deb repo
       uses: myci-actions/add-deb-repo@master
       with:
-        repo: deb https://cppfw.jfrog.io/artifactory/$(lsb_release --id --short | tr '[:upper:]' '[:lower:]') $(lsb_release --codename --short) main
+        repo: deb http://gagis.hopto.org/repo/cppfw/$(lsb_release --id --short | tr '[:upper:]' '[:lower:]') $(lsb_release --codename --short) main
         repo-name: cppfw
-        key-server: https://cppfw.jfrog.io/artifactory/api/gpg/key/public
-        keys: 4A949240F79AD8027C6CA2F4953AE777616ADEDF
-    - name: install ci tools
-      run: apt install --assume-yes myci
+        key-server: http://gagis.hopto.org/repo/cppfw/pubkey.gpg
+        install: myci
     - name: set PACKAGE_VERSION
       uses: myci-actions/export-env-var@master
       with: {name: PACKAGE_VERSION, value: $(cat version.txt)}
@@ -65,7 +68,7 @@ jobs:
         myci-apply-version.sh -v $PACKAGE_VERSION *.pom.in
         myci-apply-version.sh -v $PACKAGE_VERSION *.aar.in --filename-only
     - name: deploy
-      run: myci-deploy-maven-jfrog.sh --domain cppfw --repo android --path io/github/cppfw/$PACKAGE_NAME/$PACKAGE_VERSION android/$PACKAGE_NAME-$PACKAGE_VERSION.aar
+      run: myci-deploy-maven-nexus.sh --base-url http://gagis.hopto.org/nexus --repo android android/$PACKAGE_NAME-$PACKAGE_VERSION.aar
       # if: startsWith(github.ref, 'refs/tags/')
 ##### msvs #####
   msvs:
