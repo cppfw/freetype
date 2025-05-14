@@ -18,8 +18,7 @@ class FreetypeConan(ConanFile):
 	generators = "AutotoolsDeps" # this will set CXXFLAGS etc. env vars
 	
 	def build_requirements(self):
-		# self.tool_requires("prorab/[>=2.0.27]@cppfw/main")
-		# self.tool_requires("prorab-extra/[>=0.2.57]@cppfw/main")
+		self.tool_requires("prorab/[>=2.0.27]@cppfw/main")
 
 	def config_options(self):
 		if self.settings.os == "Windows":
