@@ -9,6 +9,9 @@ env:
   MYCI_NEXUS_PASSWORD: ${{ secrets.MYCI_NEXUS_PASSWORD }}
   MYCI_GIT_USERNAME: igagis
   MYCI_GIT_PASSWORD: ${{ secrets.MYCI_GIT_ACCESS_TOKEN }}
+  MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+  MYCI_CONAN_USER: cppfw
+  MYCI_CONAN_PASSWORD: ${{ secrets.MYCI_CONAN_PASSWORD }}
 jobs:
 ##### ios #####
   ios:
@@ -21,9 +24,9 @@ jobs:
     - name: install ci tools
       run: brew install myci
     - name: git clone
-      uses: myci-actions/checkout@master
+      uses: myci-actions/checkout@main
     - name: set PACKAGE_VERSION
-      uses: myci-actions/export-env-var@master
+      uses: myci-actions/export-env-var@main
       with: {name: PACKAGE_VERSION, value: $(cat version.txt)}
     - name: add cocoapods repo
       run: pod repo add --silent cppfw https://$MYCI_GIT_USERNAME@github.com/cppfw/cocoapods-repo.git
@@ -53,16 +56,16 @@ jobs:
     container: mingc/android-build-box:latest
     steps:
     - name: git clone
-      uses: myci-actions/checkout@master
+      uses: myci-actions/checkout@main
     - name: add cppfw deb repo
-      uses: myci-actions/add-deb-repo@master
+      uses: myci-actions/add-deb-repo@main
       with:
         repo: deb http://gagis.hopto.org/repo/cppfw/$(lsb_release --id --short | tr '[:upper:]' '[:lower:]') $(lsb_release --codename --short) main
         repo-name: cppfw
         key-server: http://gagis.hopto.org/repo/cppfw/pubkey.gpg
         install: myci
     - name: set PACKAGE_VERSION
-      uses: myci-actions/export-env-var@master
+      uses: myci-actions/export-env-var@main
       with: {name: PACKAGE_VERSION, value: $(cat version.txt)}
     - name: build
       run: |
@@ -83,7 +86,7 @@ jobs:
     - name: git clone
       uses: actions/checkout@v2
     - name: install CoAPP tools
-      uses: myci-actions/install-coapp-tools@master
+      uses: myci-actions/install-coapp-tools@main
     - name: nuget update
       run: |
         nuget restore msvs_solution/msvs_solution.sln
@@ -93,7 +96,7 @@ jobs:
     - name: build
       run: .\nuget\build_nuget.ps1
     - name: deploy
-      uses: myci-actions/publish-nuget@master
+      uses: myci-actions/publish-nuget@main
       with:
         filename: '.\nuget\*.nupkg'
         api-key: ${{ secrets.NUGET_DOT_ORG_API_KEY }}
