@@ -14,7 +14,10 @@ this_cxxflags += -Wno-version-check
 this_cflags += -Wno-version-check
 
 this_cxxflags += -fwasm-exceptions
+this_cxxflags += -sSUPPORT_LONGJMP=wasm
+this_cflags += -sSUPPORT_LONGJMP=wasm
 this_ldflags += -fwasm-exceptions
+this_ldflags += -sSUPPORT_LONGJMP=wasm
 
 this_cxxflags += -pthread
 this_cflags += -pthread
