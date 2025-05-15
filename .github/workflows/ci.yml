@@ -135,7 +135,7 @@ jobs:
           submodules: false
       - name: set PACKAGE_VERSION
         uses: myci-actions/export-env-var@main
-        with: {name: PACKAGE_VERSION, value: $(myci-deb-version.sh)}
+        with: {name: PACKAGE_VERSION, value: $(cat version.txt)}
         if: startsWith(github.ref, 'refs/tags/')
       - name: build
         run: |
